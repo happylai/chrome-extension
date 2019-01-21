@@ -106,6 +106,7 @@ function saveBackgroundColor(url, color) {
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((url) => {
     var dropdown = document.getElementById('dropdown');
+    var dom = document.getElementById('crawler');
 
     // Load the saved background color for this page and modify the dropdown
     // value, if needed.
@@ -122,5 +123,20 @@ document.addEventListener('DOMContentLoaded', () => {
       changeBackgroundColor(dropdown.value);
       saveBackgroundColor(url, dropdown.value);
     });
+    
+    dom.addEventListener('click', () => {
+      alert("hi")
+      // changeBackgroundColor(dropdown.value);
+      // saveBackgroundColor(url, dropdown.value);
+    });
   });
+  // crawler(()=>{
+  //   var dom = document.getElementById('crawler');
+
+  //   dom.addEventListener('click', () => {
+  //     alert("hi")
+  //     // changeBackgroundColor(dropdown.value);
+  //     // saveBackgroundColor(url, dropdown.value);
+  //   });
+  // })
 });
